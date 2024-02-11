@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Watchers Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* צבע רקע אפור בהיר */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff69b4; /* צבע וורוד */
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #00ced1; /* צבע תכלת */
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Weight Watchers Controller</h1>
+    </header>
+
+    <main>
+        <!-- הוסף כאן את קטעי הקוד שלך -->
+        <div>
+            <!-- דוגמה להוספת קישור ולהוספת צבעים נוספים -->
+            <a href="http://localhost:5188/api/Subscriber" style="color: #008000;" onclick="openRegistrationWindow()">Register</a>
+            <a href="http://localhost:5032/api/WeightWatchers" style="color: #000080;">Login</a>
+            <a href="http://localhost:5188/api/Subscriber/3" style="color: #ff1493;">Get Card by ID</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Weight Watchers Controller
+    </footer>
+
+    <script>
+        function openRegistrationWindow() {
+            // יצירת חלונית חדשה
+            var registrationWindow = window.open("http://localhost:5188/api/Subscriber", "Registration", "width=400,height=400");
+
+            // הוספת אירוע לסגירת החלונית ושליחת הנתונים
+            registrationWindow.onbeforeunload = function () {
+                // אם יש אפשרות לקבל נתונים מהחלונית, הוסף כאן קוד
+                // לשליחת קובץ JSON או כל פעולה נדרשת
+            };
+        }
+    </script>
+
+</body>
+</html>
